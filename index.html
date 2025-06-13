@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gojek - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GOJEK</h1>
+        </div>
+        <div class="user-menu">
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-user-circle" id="userProfile"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-bar">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Mau kemana hari ini?" id="searchInput">
+            </div>
+        </section>
+
+        <section class="services">
+            <h2>Layanan Kami</h2>
+            <div class="service-grid">
+                <div class="service-item" data-service="goride">
+                    <div class="icon"><i class="fas fa-motorcycle"></i></div>
+                    <p>GoRide</p>
+                </div>
+                <div class="service-item" data-service="gocar">
+                    <div class="icon"><i class="fas fa-car"></i></div>
+                    <p>GoCar</p>
+                </div>
+                <div class="service-item" data-service="gofood">
+                    <div class="icon"><i class="fas fa-utensils"></i></div>
+                    <p>GoFood</p>
+                </div>
+                <div class="service-item" data-service="goshop">
+                    <div class="icon"><i class="fas fa-shopping-bag"></i></div>
+                    <p>GoShop</p>
+                </div>
+                <div class="service-item" data-service="gosend">
+                    <div class="icon"><i class="fas fa-box"></i></div>
+                    <p>GoSend</p>
+                </div>
+                <div class="service-item" data-service="gomart">
+                    <div class="icon"><i class="fas fa-store"></i></div>
+                    <p>GoMart</p>
+                </div>
+                <div class="service-item" data-service="gomed">
+                    <div class="icon"><i class="fas fa-medkit"></i></div>
+                    <p>GoMed</p>
+                </div>
+                <div class="service-item" data-service="more">
+                    <div class="icon"><i class="fas fa-ellipsis-h"></i></div>
+                    <p>Lainnya</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo-section">
+            <div class="section-header">
+                <h2>Promo Spesial</h2>
+                <a href="#" class="see-all">Lihat Semua</a>
+            </div>
+            <div class="promo-slider">
+                <div class="promo-card">
+                    <img src="https://via.placeholder.com/300x150?text=Promo+1" alt="Promo 1">
+                    <div class="promo-content">
+                        <h3>Diskon 50% GoRide</h3>
+                        <p>Berlaku hingga 30 Juni 2023</p>
+                        <button class="btn-promo">Pakai Promo</button>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <img src="https://via.placeholder.com/300x150?text=Promo+2" alt="Promo 2">
+                    <div class="promo-content">
+                        <h3>Cashback GoFood 30K</h3>
+                        <p>Min. transaksi Rp 100.000</p>
+                        <button class="btn-promo">Pakai Promo</button>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <img src="https://via.placeholder.com/300x150?text=Promo+3" alt="Promo 3">
+                    <div class="promo-content">
+                        <h3>Gratis Ongkir GoSend</h3>
+                        <p>Max. 10 km pertama</p>
+                        <button class="btn-promo">Pakai Promo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nearby-section">
+            <div class="section-header">
+                <h2>Restoran Terdekat</h2>
+                <a href="#" class="see-all">Lihat Semua</a>
+            </div>
+            <div class="restaurant-list">
+                <div class="restaurant-card">
+                    <img src="https://via.placeholder.com/100x100?text=Resto+1" alt="Restoran 1">
+                    <div class="restaurant-info">
+                        <h3>McDonald's</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.5</span>
+                            <span>(500+)</span>
+                        </div>
+                        <p>Fast Food • 0.8 km</p>
+                        <div class="delivery-info">
+                            <span><i class="fas fa-motorcycle"></i> Rp 10.000</span>
+                            <span><i class="fas fa-clock"></i> 15-25 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="restaurant-card">
+                    <img src="https://via.placeholder.com/100x100?text=Resto+2" alt="Restoran 2">
+                    <div class="restaurant-info">
+                        <h3>KFC</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.3</span>
+                            <span>(300+)</span>
+                        </div>
+                        <p>Fast Food • 1.2 km</p>
+                        <div class="delivery-info">
+                            <span><i class="fas fa-motorcycle"></i> Rp 12.000</span>
+                            <span><i class="fas fa-clock"></i> 20-30 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Beranda</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-list"></i>
+            <span>Pesanan</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-wallet"></i>
+            <span>Dompet</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profil</span>
+        </a>
+    </nav>
+
+    <div class="modal" id="serviceModal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle">Pesan GoRide</h2>
+            <div id="map" style="height: 200px; margin-bottom: 20px;"></div>
+            <div class="input-group">
+                <label for="pickupLocation">Lokasi Penjemputan</label>
+                <input type="text" id="pickupLocation" placeholder="Masukkan lokasi penjemputan">
+            </div>
+            <div class="input-group">
+                <label for="destination">Tujuan</label>
+                <input type="text" id="destination" placeholder="Masukkan tujuan">
+            </div>
+            <button class="btn-confirm" id="confirmOrder">Pesan Sekarang</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

